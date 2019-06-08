@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script src="../javascripts/angular.min.js"></script>
+    <title>login</title>
+    <ng-include src="layout.html"></ng-include>
+    <form action="/login" method="POST" ng-app="demoApp">
+      <div ng-controller="angularController">
+        <input type="text" name="username" ng-model="username" required />
+        <input type="password" name="password" ng-model="password" required />
+        <input type="submit" value="submit" />
+        <!-- <span ng-bind="username"></span> -->
+      </div>
+    </form>
+    <script src="../javascripts/login.js"></script>
+  </body>
+</html>

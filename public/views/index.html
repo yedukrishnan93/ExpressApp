@@ -1,0 +1,101 @@
+<html>
+  <body>
+    <script src="../javascripts/angular.min.js"></script>
+    <script src="../javascripts/index.js"></script>
+    <link rel="stylesheets" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.css" />
+    <!-- <div class="contanier">
+      <div class="row">
+        <div ng-app="myApp">
+          <div ng-controller="myCtrl">
+            <div class="nav-bar">
+              <button
+                ng-repeat="obj in objArray"
+                ng-click="myClick(obj.category_id)"
+              >
+                {{ obj.name }}
+              </button>
+            </div>
+            <br />
+            <div class="col-sm">
+              <label ng-if="filmDetails[0].description">
+                description : {{ filmDetails[0].description }}</label
+              ><br />
+            </div>
+            <div class="col-sm">
+              <ul>
+                <li ng-repeat="film in filmArray">
+                  <label ng-click="getfilmDetails(film.film_id)">{{
+                    film.title
+                  }}</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="container" ng-app="myApp">
+      <div ng-controller="myCtrl">
+        <div class="row">
+          <div class="nav-bar">
+            <button
+              ng-repeat="obj in objArray"
+              ng-click="myClick(obj.category_id)"
+            >
+              {{ obj.name }}
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <ul>
+              <li ng-repeat="film in filmArray">
+                <label ng-click="getfilmDetails(film.film_id,film.title)">{{
+                  film.title
+                }}</label>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <label ng-if="filmDetails[0].description">
+              <b><u>Film</u></b> : {{ title }} <br />
+            </label>
+            <br />
+            <label ng-if="filmDetails[0].description">
+              <b><u>Relesae Year</u></b> :
+              {{ filmDetails[0].release_year }}</label
+            ><br />
+            <label ng-if="filmDetails[0].description">
+              <b><u>Language</u></b> : {{ filmDetails[0].name }}</label
+            ><br />
+            <label ng-if="filmDetails[0].description">
+              <b><u>Description</u></b> :
+              {{ filmDetails[0].description }}</label
+            ><br />
+            <label ng-if="filmDetails[0].description">
+              <b><u>Actors</u></b>
+            </label>
+            <ul ng-if="filmDetails[0].description">
+              <li ng-repeat="actor in actorDetails ">
+                {{ actor.first_name }} {{ actor.last_name }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .nav-bar button {
+        padding: 10px;
+        margin-left: 13px;
+        display: inline-grid;
+        background-color: #19ca70;
+        border: 0px;
+        border-radius: 15px;
+      }
+    </style>
+  </body>
+</html>

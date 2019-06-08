@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  script(src='/javascripts/user.js')
+
+  h1= title
+  p Welcome to #{title}
+  button(onclick="gotoLogin()") Login
+  form(action="." method="POST")
+    input(type="text" name="firstname")#firstname
+    input(type="text" name="lastname")#lastname
+    input(type="text" name="email")#email
+    input(type="password" name="password")#password
+    input(type="submit" value="Submit")

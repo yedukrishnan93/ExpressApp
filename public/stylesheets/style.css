@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.nav-bar {
+  height: 63px;
+  background-color: yellowgreen;
+  border-radius: 14px;
+}
